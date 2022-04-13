@@ -90,3 +90,23 @@ await foreach(int i in Tests.GenerateNumbers(10))
 {
     Console.WriteLine(i);
 }
+
+
+// out paramters
+Tests.GetPI(out float myPi);
+Console.WriteLine(myPi);    
+
+
+// local function with access to local variable myPi
+int localSquare(int x)
+{
+    int result = x * x;
+    Console.WriteLine($"Result is {result}, myPi = {myPi}");
+    return result;
+};
+
+int localSquareResult = localSquare(39);
+Console.WriteLine(localSquareResult);   
+
+
+

@@ -32,4 +32,10 @@ public class Tests {
         }
     }
 
+    // out parameters
+    public static void GetPI(out float pi)
+    {
+        pi = 3.14f;
+    }
+
 }
